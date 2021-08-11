@@ -1,21 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { Button, SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
+import Navigation from './src/Navigation';
 
 export default function App() {
+
+  const [couserGoal, setCouserGoal] = useState('');
+  const [allCourses, setAllCourses] = useState<any>([]);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Navigation />
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
+  safeArea: {
+    marginTop: 40,
+    padding: 20,
+  },
+  courseGoal: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  }
 });
