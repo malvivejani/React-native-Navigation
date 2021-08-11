@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { ContactStackNavigator, StackNavigator, Tab3StackNavigator } from './StackNavigator';
-import { getFocusedRouteNameFromRoute, useNavigation } from '@react-navigation/native';
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 
 const Tab = createBottomTabNavigator();
 
@@ -11,7 +11,6 @@ const BottomTabNavigator = ({ navigation }: any) => {
             <Tab.Screen name="home-tab" component={StackNavigator} options={({ route }) => {
                 let tabbarVisible;
                 const routeName = getFocusedRouteNameFromRoute(route);
-                console.log("route name", routeName)
                 if (routeName === "about") {
                     tabbarVisible = false
                 }
