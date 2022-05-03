@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
-import { Button, SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Button, SafeAreaView, StyleSheet, Text, TextInput, View, DevSettings } from 'react-native';
 import Navigation from './src/Navigation';
 // import ErrorBoundary from 'react-native-error-boundary';
 // import * as Sentry from 'sentry-expo';
